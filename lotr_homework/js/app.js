@@ -63,7 +63,7 @@ const makeMiddleEarth = () => {
   //   3d. appends each land to the middle-earth section
   for (let i = 0; i < lands.length; i++) {
     const $a = $(`<a id=${lands[i]}/>`);
-    const $h1 = $(`<h1>${lands[i]}<h1/>`);
+    const $h1 = $(`<h1>${lands[i]}</h1>`);
     $a.append($h1);
     $section.append($a);
   }
