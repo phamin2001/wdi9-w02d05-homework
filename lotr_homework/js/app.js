@@ -130,10 +130,16 @@ const makeBaddies = () => {
   // 2. give each of the baddies a class of "baddy"
 
   // 3. remember to append them to Mordor
+  const $ul = $('<ul/>');
+  for (let i = 0; i < baddies.length; i++) {
+    const $li = $(`<li class="baddy">${baddies[i]}</li>`);
+    $ul.append($li);
+    $('#Mordor').append($ul);
+  }
 };
 
 // COMMIT YOUR WORK
-// The commit message should read: "Chapter 4 complete - Made the Baddies"..
+// The commit message should read: "Chapter 4 complete - Made the Baddies".
 
 // ============
 // Chapter 5
