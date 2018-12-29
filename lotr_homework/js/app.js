@@ -148,7 +148,7 @@ const makeBuddies = () => {
 
   // 1. create an aside tag and append it to middle-earth below mordor
   const $aside = $('<aside/>');
-  $('#Mordor').append($aside);
+  $('#middle-earth').append($aside);
   // 2. display an unordered list of buddies in the aside
   const $ul = $('<ul/>');
   for (let i = 0; i < buddies.length; i++) {
@@ -171,7 +171,8 @@ const leaveTheShire = () => {
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
 
   // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
-
+  const $hobbits = $('#The-Shire').children('ul');
+  $('#Rivendell').append($hobbits);
 };
 
 // COMMIT YOUR WORK
