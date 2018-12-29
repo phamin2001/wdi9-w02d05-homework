@@ -186,7 +186,12 @@ const beautifulStranger = () => {
   // 1. change the buddy 'Strider' textnode to "Aragorn"
 
   // hint: You can get a list of elements by tag name, such as 'aside'
-
+  const $lis = $('aside').find('ul').find('li');
+  $lis.each(function (index) {
+    if($(this).text() === "Strider") {
+      $(this).text("Aragon");
+    }
+  })
 };
 
 // COMMIT YOUR WORK
