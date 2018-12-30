@@ -203,10 +203,10 @@ const beautifulStranger = () => {
 const forgeTheFellowShip = () => {
 
   // 1. create a new div with an id 'the-fellowship'
-  const $div = $('<div id="the-fellowhip"/>');
+  const $div = $('<div id="the-fellowship"/>');
 
   // 2. add an h1 with the text 'The Fellowship' to this new div
-  $div.append('<h1>The Fellowhip</h1>');
+  $div.append('<h1>The Fellowship</h1>');
   // 3. append the fellowship to middle-earth
   $('#middle-earth').append($div);
   // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
@@ -276,9 +276,17 @@ const hornOfGondor = () => {
 const itsDangerousToGoAlone = () => {
 
   // 1. take Frodo and Sam out of the fellowship and move them to Mordor (they don't need to be inside a ul in Mordor)
-
+  $('#the-fellowship').find('li').filter(function(index) {
+    if($(this).text() === "Frodo Baggins") {
+      $(this).appendTo('#Mordor');
+    }
+    if($(this).text() === "Samwise 'Sam' Gamgee") {
+      $(this).appendTo('#Mordor');
+    }
+  })
   // 2. add a div with an id of 'mount-doom' to Mordor
-
+  const $div = $('<div id="mount-doom"/>');
+  $('#Mordor').append($div);
 };
 
 // COMMIT YOUR WORK
