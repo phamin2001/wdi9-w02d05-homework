@@ -320,11 +320,13 @@ const weWantsIt = () => {
 const thereAndBackAgain = () => {
 
   // 1. remove Gollum and the Ring from the DOM
-
+  $('#Mordor').find('div').filter('#gollum').remove();
   // 2. remove all the baddies from the DOM
-
+  $('#Mordor').find('li').filter('.baddy').remove();
   // 3. Move all the hobbits back to the shire
-
+  $('#Rivendell').find('ul').appendTo('#The-Shire');
+  // or:
+  // $('#Rivendell').find('li').filter('.hobbit').appendTo('#The-Shire');
 };
 
 // COMMIT YOUR WORK
